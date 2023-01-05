@@ -42,9 +42,6 @@
   } s_avalon_glb_t;
 
   typedef struct packed {
-  } s_avalon_miso_t;
-
-  typedef struct packed {
     avalon_addr_t   address;
     avalon_be_t     byte_enable;
     logic           debug_access;

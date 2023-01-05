@@ -78,7 +78,7 @@
     AXI_EXOKAY,
     AXI_SLVERR,
     AXI_DECERR
-  } axi_error_t;
+  } axi_resp_t;
 
   typedef enum logic [2:0] {
     AXI_INSTRUCTION = 'b100,
@@ -99,7 +99,7 @@
     logic           wready;
     // Write Response channel
     axi_tid_t       bid;
-    axi_error_t     bresp;
+    axi_resp_t      bresp;
     axi_user_rsp_t  buser;
     logic           bvalid;
     // Read addr channel
@@ -107,7 +107,7 @@
     // Read data channel
     axi_tid_t       rid;
     axi_data_t      rdata;
-    axi_error_t     rresp;
+    axi_resp_t      rresp;
     logic           rlast;
     axi_user_req_t  ruser;
     logic           rvalid;
@@ -164,14 +164,14 @@
     logic           wready;
     // Write Response channel
     axi_tid_t       bid;
-    axi_error_t     bresp;
+    axi_resp_t      bresp;
     logic           bvalid;
     // Read addr channel
     logic           arready;
     // Read data channel
     axi_tid_t       rid;
     axi_data_t      rdata;
-    axi_error_t     rresp;
+    axi_resp_t      rresp;
     logic           rvalid;
   } s_axil_miso_t;
 

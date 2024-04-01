@@ -99,6 +99,7 @@
     ahb_data_t      hwdata;
     logic           hwrite;
     logic           hsel;
+    logic           hready;
   } s_ahb_mosi_t;
 
   endpackage
